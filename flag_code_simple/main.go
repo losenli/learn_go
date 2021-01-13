@@ -13,7 +13,7 @@ import (
 )
 
 /**
-os.Args + flag 接收命令行参数
+os.Args + flag_code_simple 接收命令行参数
 */
 
 func argsDemo() {
@@ -51,10 +51,10 @@ func (p *Person) newPerson(name, sex string, age int) *Person {
 func flagDemo() {
 	var p Person
 	var sex string
-	// 1、flag.Type返回对应类型的指针
+	// 1、flag_code_simple.Type返回对应类型的指针
 	name := flag.String("name", "lzh", "姓名")
 	age := flag.Int("age", 23, "年龄")
-	// 2、flag.TypeVar返回传进来的值
+	// 2、flag_code_simple.TypeVar返回传进来的值
 	flag.StringVar(&sex, "sex", "man", "性别")
 	// 3、解析命令行参数
 	flag.Parse()

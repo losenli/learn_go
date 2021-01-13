@@ -14,9 +14,9 @@ import (
 var db *sqlx.DB
 
 type User struct {
-	ID int
+	ID   int
 	Name string
-	Age int
+	Age  int
 	Addr string
 }
 
