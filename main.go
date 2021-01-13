@@ -1,6 +1,10 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"github.com/losenli/learn_go/http_code_simple"
+	"github.com/myzhan/boomer"
+)
 
 /**
 # 编译命令
@@ -9,8 +13,14 @@ import "fmt"
 3、go build -o XXX 指定编译完成后可执行程序的名字
 4、go install 编译并保存到GOPATH/bin目录下
 5、go run XXX.go 编译并执行XXX.go程序
- */
+*/
 
 func main() {
 	fmt.Println("Hello,World!")
+	task := boomer.Task{
+		Name:   "app list",
+		Weight: 10,
+		Fn:     http_code_simple.Worker,
+	}
+	boomer.Run(&task)
 }

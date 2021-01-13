@@ -39,6 +39,6 @@ func main() {
 
 	// gjson
 	result := gjson.Get(value, "age")
-	logrus.Info(result)
+	logrus.Info(result.Int() == 27)
 
 }
