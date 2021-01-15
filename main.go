@@ -2,8 +2,6 @@ package main
 
 import (
 	"fmt"
-	"github.com/losenli/learn_go/http_code_simple"
-	"github.com/myzhan/boomer"
 )
 
 /**
@@ -17,10 +15,4 @@ import (
 
 func main() {
 	fmt.Println("Hello,World!")
-	task := boomer.Task{
-		Name:   "app list",
-		Weight: 10,
-		Fn:     http_code_simple.Worker,
-	}
-	boomer.Run(&task)
 }
